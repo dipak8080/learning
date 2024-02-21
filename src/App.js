@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // This imports the CSS for styling
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        {/* Replace "Logo" with an img tag and your logo */}
+        <h1>Logo</h1>
+        <nav>
+          {/* These could be <Link> components if you're using react-router */}
+          <a href="/buy">Buy</a>
+          <a href="/sell">Sell</a>
+          <a href="/about-us">About Us</a>
+        </nav>
       </header>
+      <main>
+        <section className="search">
+          {/* This could be a form */}
+          <input type="text" placeholder="Enter Location" />
+          {/* Add more inputs for Property Type and Budget */}
+          <button>Search</button>
+        </section>
+        <section className="featured">
+          {/* Map over your featured properties and display them */}
+        </section>
+        <section className="actions">
+          <button>Buy property</button>
+          <button>Sell property</button>
+        </section>
+      </main>
     </div>
   );
 }
